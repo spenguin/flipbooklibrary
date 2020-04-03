@@ -12,6 +12,7 @@ function initialise()
     add_action( 'init', '\FlipbookCustomPostTypes\create_post_type' );
     add_action( 'add_meta_boxes', '\FlipbookCustomPostTypes\register_meta_boxes' );
     add_action( 'save_post', '\FlipbookCustomPostTypes\save_meta_box' );
+    //add_action( 'init', '\FlipbookCustomPostTypes\rewrite_rule' );
     //add_action( 'init', '\FlipbookCustomPostTypes\create_custom_taxonomy' );
 }
 
@@ -24,6 +25,7 @@ function create_post_type() {
         ),
         'public' => true,
         'has_archive' => true,
+        'supports' => array( 'thumbnail','editor' )        
       )
     );
 }
@@ -57,6 +59,16 @@ function save_meta_box( $post_id ) {
             update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
         }
     }
+}
+
+/**
+ * Add rewrite rules
+ *
+ * @link https://codex.wordpress.org/Rewrite_API/add_rewrite_rule
+ */
+function fs_rewrite_rule()
+{
+	add_rewrite_rule( '^fonts/([^/]*)/?', 'index.php?pagename=fonts&fontFamily=$matches[1]', 'top' );
 }
 
 /*

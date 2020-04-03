@@ -33,13 +33,13 @@ FlipbookLibraryPlugin::initialise();
 require_once( FBL_INCLUDES . 'CustomPosts.php' );
 //require_once( FBL_INCLUDES . 'Upload.class.php' );
 //require_once( FBL_INCLUDES . 'Admin.php' );
-//require_once( FBL_INCLUDES . 'Shortcodes.php' );
+require_once( FBL_INCLUDES . 'Shortcodes.php' );
 //require_once( FBL_INCLUDES . 'Pricing.php' );
-//require_once( FBL_INCLUDES . 'Pages.php' );
+require_once( FBL_INCLUDES . 'Pages.php' );
 //require_once( FBL_INCLUDES . 'Orders.class.php' );
 //require_once( FBL_INCLUDES . 'Functions.php' );
 //require_once( FBL_INCLUDES . 'PaymentGateways.php' );
-//require_once( FBL_INCLUDES . 'Actions.php' );
+require_once( FBL_INCLUDES . 'Actions.php' );
 //require_once( FBL_INCLUDES . 'Display.php' );
 //require_once( FBL_INCLUDES . 'AssetManagement.class.php' );
 
