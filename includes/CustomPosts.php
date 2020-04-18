@@ -33,12 +33,18 @@ function create_post_type() {
 function register_meta_boxes()
 {
     add_meta_box( 'pdfurl', __( 'PDF URL' ), '\FlipbookCustomPostTypes\pdfurl_callback', 'flipbook');
+    add_meta_box( 'imagepath', __( 'Image Path' ), '\FlipbookCustomPostTypes\image_path_callback', 'flipbook');
 }
 
 
 function pdfurl_callback( $post )
 {
     include FBL_TEMPLATES . 'admin/form.php';
+}
+
+function image_path_callback( $post )
+{
+    include FBL_TEMPLATES . 'admin/image-path-form.php';
 }
 
 /**
@@ -53,6 +59,7 @@ function save_meta_box( $post_id ) {
     }
     $fields = [
         'pdfurl',
+        'image_path'
     ];
     foreach ( $fields as $field ) {
         if ( array_key_exists( $field, $_POST ) ) {

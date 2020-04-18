@@ -3,9 +3,10 @@
  * Create Actions
  */
 
+add_action( 'display_library', 'display_before_library', 10 );
 add_action( 'display_library', 'display_library', 20 );
 add_action( 'display_library', 'display_after_library', 30 );
-add_action( 'display_title', 'display_title', 20 );
+//add_action( 'display_title', 'display_title', 20 );
 
 
 function display_library( $pageNo = 1 )
@@ -56,8 +57,14 @@ function display_after_library()
     do_action( 'display_after_titlelist', $pageNo, $ofPages );
 }
 
+
+function x_display_titlelist( $titles )
+{
+    include_once( FBL_TEMPLATES . '/test/displayFlipbook.php' );
+}
+
 function display_titlelist( $titles )
-{   
+{   exit( print_r( $titles ) );
     ?>
     <div class="title-list">
         <?php
@@ -98,6 +105,7 @@ function display_title()
     $book   = array_shift( $query->get_posts() );
 
     $pdfurl = get_post_meta( $book->ID, 'pdfurl', TRUE );
+    $image_path = get_post_meta( $book->ID, 'image_path', TRUE );
 
     include_once( FBL_TEMPLATES . '/display/displayFlipbook.php' );
 }

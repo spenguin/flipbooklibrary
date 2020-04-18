@@ -11,7 +11,7 @@ Text Domain: flipbooklibrary
 */
 defined( 'ABSPATH' ) or die( 'Access denied.' );
 
-define( 'FBL_CORE', dirname( __FILE__) );
+define( 'FBL_CORE', dirname( __FILE__) ); 
 define( 'FBL_INCLUDES', FBL_CORE . '/includes/' );
 define( 'FBL_TEMPLATES', FBL_CORE . '/templates/' );
 define( 'FBL_VENDOR', FBL_CORE . '/vendor/' );
@@ -39,7 +39,9 @@ require_once( FBL_INCLUDES . 'Pages.php' );
 //require_once( FBL_INCLUDES . 'Orders.class.php' );
 //require_once( FBL_INCLUDES . 'Functions.php' );
 //require_once( FBL_INCLUDES . 'PaymentGateways.php' );
-require_once( FBL_INCLUDES . 'Actions.php' );
+require_once( FBL_INCLUDES . 'Hooks.php' );
+//require_once( FBL_INCLUDES . 'Scripts.php' );
+//require_once( FBL_INCLUDES . 'Actions.php' );
 //require_once( FBL_INCLUDES . 'Display.php' );
 //require_once( FBL_INCLUDES . 'AssetManagement.class.php' );
 
