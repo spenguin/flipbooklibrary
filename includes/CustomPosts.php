@@ -25,7 +25,7 @@ function create_post_type() {
         ),
         'public' => true,
         'has_archive' => true,
-        'supports' => array( 'thumbnail','editor' )        
+        'supports' => array( 'title', 'thumbnail', 'editor' )        
       )
     );
 }
@@ -33,13 +33,13 @@ function create_post_type() {
 function register_meta_boxes()
 {
     add_meta_box( 'pdfurl', __( 'PDF URL' ), '\FlipbookCustomPostTypes\pdfurl_callback', 'flipbook');
-    add_meta_box( 'imagepath', __( 'Image Path' ), '\FlipbookCustomPostTypes\image_path_callback', 'flipbook');
+    //add_meta_box( 'imagepath', __( 'Image Path' ), '\FlipbookCustomPostTypes\image_path_callback', 'flipbook');
 }
 
 
 function pdfurl_callback( $post )
 {
-    include FBL_TEMPLATES . 'admin/form.php';
+    include FBL_TEMPLATES . 'admin/pdf-path-form.php';
 }
 
 function image_path_callback( $post )

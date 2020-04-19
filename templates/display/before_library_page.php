@@ -7,16 +7,10 @@
     $path = './../wp-content/plugins/flipbooklibrary/templates/';
 ?>
   <link rel="stylesheet" href="<?php echo $path; ?>css/bootstrap.min.css">
-  <!--<link rel="stylesheet" href="<?php echo $path; ?>css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="<?php echo $path; ?>css/bootstrap4-styles.css">-->
+  <link rel="stylesheet" href="<?php echo $path; ?>css/bootstrap4-styles.css">
 
   <link rel="stylesheet" href="<?php echo $path; ?>css/fontawesome.min.css">
   <link rel="stylesheet" href="<?php echo $path; ?>css/fontawesome-solid.min.css">
-
-  <!--<link rel="stylesheet" href="<?php echo $path; ?>css/style.css">-->
-
-  <!--<script src="<?php echo $path; ?>js/jquery.min.js"></script>
-  <script src="<?php echo $path; ?>js/bootstrap.min.js"></script>-->
 
   <div class="container">
       <div class="content">

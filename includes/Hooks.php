@@ -18,7 +18,8 @@ function display_library_page()
     $args   = [
         'post_type'         => 'flipbook',
         'posts_per_page'    => -1,
-        'status'            => 'published'
+        'status'            => 'published',
+        'orderby'           => 'title'
     ];
 
     $query  = new WP_Query( $args );
