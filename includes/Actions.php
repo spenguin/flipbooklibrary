@@ -1,6 +1,6 @@
 <?php
 /**
- * Create Actions
+ * Create Actions - No longer used
  */
 
 add_action( 'display_library', 'display_before_library', 10 );

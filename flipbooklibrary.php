@@ -31,6 +31,7 @@ FlipbookLibraryPlugin::initialise();
 
 //require_once( FBL_INCLUDES . 'Database.php' );
 require_once( FBL_INCLUDES . 'CustomPosts.php' );
+require_once( FBL_INCLUDES . 'Images.php' );
 //require_once( FBL_INCLUDES . 'Upload.class.php' );
 //require_once( FBL_INCLUDES . 'Admin.php' );
 require_once( FBL_INCLUDES . 'Shortcodes.php' );

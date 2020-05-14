@@ -23,7 +23,7 @@ function load_flb_styles()
     wp_enqueue_style( 'flbstyle' );
 }
 
-add_action( 'wp_enqueue_scripts', 'load_flb_styles' );
+//add_action( 'wp_enqueue_scripts', 'load_flb_styles' );
 
 
 wp_register_script( 'jquery', './../wp-content/plugins/flipbooklibrary/templates/js/jquery.min.js' ); //'https://code.jquery.com/jquery-3.5.0.min.js' );

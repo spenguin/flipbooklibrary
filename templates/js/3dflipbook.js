@@ -3170,12 +3170,12 @@
             }, BookView.prototype.getTemplate = function() {
                 return {
                     html: "templates/default-book-view.html",
-                    styles: ["./../wp-content/themes/twentytwenty/templates/css/black-book-view.css"],
+                    styles: ["./../wp-content/plugins/flipbooklibrary/templates/css/black-book-view.css"],
                     links: [{
                         rel: "stylesheet",
-                        href: "./../wp-content/themes/twentytwenty/templates/css/font-awesome.min.css"
+                        href: "./../wp-content/plugins/flipbooklibrary/templates/css/font-awesome.min.css"
                     }],
-                    script: "./../wp-content/themes/twentytwenty/templates/js/default-book-view.js"
+                    script: "./../wp-content/plugins/flipbooklibrary/templates/js/default-book-view.js"
                 }
             }, BookView
         }(_View3.default);

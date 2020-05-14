@@ -6,7 +6,7 @@
 <div class="books">
     <h2>Titles</h2>
     <?php foreach( $titles as $title ): 
-        $featured_img_url = get_the_post_thumbnail_url( $title['id'],'full' );
+        $featured_img_url = get_the_post_thumbnail_url( $title['id'],[300,215] );
         ?>
         <div class="thumb">
             <img src="<?php echo $featured_img_url; ?>" id=<?php echo str_replace( ' ', '', $title['title'] ); ?> class="btn" />
