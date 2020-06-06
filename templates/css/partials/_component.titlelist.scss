@@ -1,0 +1,33 @@
+/* Title list styles */
+
+.title-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-list--details {
+    width: 23%;
+    margin-right: 2%;
+    height: 470px;
+    margin-bottom: 32px;
+    .title-list--details_thumb {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        padding: 0;
+        &:hover {
+            border:5px solid lightblue;
+        }
+    }
+    h2 {
+        font-size: 20px;
+    }
+
+}
+

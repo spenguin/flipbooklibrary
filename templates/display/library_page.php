@@ -18,7 +18,7 @@
     };
     var booksOptions    = {};
 </script>
-<div class="books">
+<div class="books title-list">
     <?php 
         echo $title_str;
     ?>

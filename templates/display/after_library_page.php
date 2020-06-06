@@ -7,7 +7,6 @@
 <?php
     $path = './../wp-content/plugins/flipbooklibrary/templates/';
 ?>
-</div><!-- end .title-list -->
 
 <script type="text/javascript">
   var instance = {

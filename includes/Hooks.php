@@ -48,18 +48,21 @@ function display_title( $post, $postId )
     $pdfurl     = get_post_meta( $post->ID, 'pdfurl', TRUE );
     ob_start();
     ?>
-        <div class="thumb">
-            <img id="<?php echo $titleId; ?>" src="<?php echo $img_url; ?>" class="btn"/>
-            <div class="caption">
-                <?php echo $post->post_title; ?>
+        <div class="title-list--details">
+            <div class="title-list--details_thumb">
+                <?php the_post_thumbnail( [300, 500], ['id'=>$titleId, 'class' => 'btn'] ); ?>
+                <!--<img id="<?php echo $titleId; ?>" src="<?php echo $img_url; ?>" class="btn"/>-->
+                <div class="title-list--details_caption">
+                    <h2><?php echo $post->post_title; ?></h2>
+                </div>
             </div>
+            <script type="text/javascript">
+                booksOptions["<?php echo $titleId; ?>"] = {
+                    pdf: "<?php echo $pdfurl; ?>", 
+                    downloadURL: "<?php echo $pdfurl; ?>", 
+                    template: template
+                };
+            </script>  
         </div>
-        <script type="text/javascript">
-            booksOptions["<?php echo $titleId; ?>"] = {
-                pdf: "<?php echo $pdfurl; ?>", 
-                downloadURL: "<?php echo $pdfurl; ?>", 
-                template: template
-            };
-        </script>  
     <?php return ob_get_clean();
 }
