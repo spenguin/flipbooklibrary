@@ -2,8 +2,13 @@
 /**
  * HTML for after Library Page
  */
-
+$pageCount  = ceil( $titleCount / $postsPerPage );
 ?>
+<div class="title-pagination">
+    <?php echo $navStr; ?>
+</div>
+
+
 <?php
     $path = './../wp-content/plugins/flipbooklibrary/templates/';
 ?>

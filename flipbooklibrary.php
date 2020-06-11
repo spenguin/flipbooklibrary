@@ -38,7 +38,7 @@ require_once( FBL_INCLUDES . 'Shortcodes.php' );
 //require_once( FBL_INCLUDES . 'Pricing.php' );
 require_once( FBL_INCLUDES . 'Pages.php' );
 //require_once( FBL_INCLUDES . 'Orders.class.php' );
-//require_once( FBL_INCLUDES . 'Functions.php' );
+require_once( FBL_INCLUDES . 'Functions.php' );
 //require_once( FBL_INCLUDES . 'PaymentGateways.php' );
 require_once( FBL_INCLUDES . 'Hooks.php' );
 require_once( FBL_INCLUDES . 'Scripts.php' );

@@ -4,8 +4,8 @@
  */
 
 add_action( 'display_library', 'display_before_library_page', 10 );
-add_action( 'display_library', 'display_library_page', 20 );
-add_action( 'display_library', 'display_after_library_page', 30 );
+add_action( 'display_library', 'display_library_page', 20, 2 );
+add_action( 'display_library', 'display_after_library_page', 30, 2 );
 add_filter( 'display_title', 'display_title', 10, 2 );
 
 function display_before_library_page()
@@ -14,11 +14,12 @@ function display_before_library_page()
 }
 
 
-function display_library_page()
+function display_library_page( $pageNo, $postsPerPage )
 {
     $args   = [
         'post_type'         => 'flipbook',
-        'posts_per_page'    => -1,
+        'posts_per_page'    => $postsPerPage,
+        'offset'            => ( $pageNo - 1 ) * $postsPerPage,
         'status'            => 'published',
         'orderby'           => 'title'
     ];
@@ -36,8 +37,18 @@ function display_library_page()
     include_once( FBL_TEMPLATES . 'display/library_page.php' );
 }
 
-function display_after_library_page()
+function display_after_library_page( $pageNo, $postsPerPage )
 {
+    $args   = [
+        'post_type'         => 'flipbook',
+        'posts_per_page'    => -1,
+        'status'            => 'published',
+    ]; 
+    
+    $query  = new WP_Query( $args );
+
+    $navStr = pagination( ceil( $query->post_count / $postsPerPage ), $postsPerPage, $pageNo );
+    
     include_once( FBL_TEMPLATES . 'display/after_library_page.php' ); 
 }
 

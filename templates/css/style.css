@@ -1,4 +1,7 @@
 /* CSS Accumulator */
+/**
+Colours
+*/
 /** Current stylesheet */
 .comment p, .question p {
   margin-bottom: 3px;
@@ -560,6 +563,21 @@ body::before {
 }
 .title-list--details h2 {
   font-size: 20px;
+}
+
+/** Pagination style */
+nav.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav.pagination .pagination-page a {
+  padding: 0 10px;
+  font-size: 1.9rem;
+  color: #007fdc;
+}
+nav.pagination .current-page a {
+  color: #00192b;
 }
 
 /*# sourceMappingURL=style.css.map */

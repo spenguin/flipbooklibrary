@@ -16,9 +16,10 @@ function createShortcodes()
 
 function displayLibrary()
 {   
-    $pageNo = 1; //( 1 == count( $segments ) ) ? 1 : $segments[1];
+    $postsPerPage   = 4;
+    $pageNo = isset( $_GET['pageNo'] ) ? $_GET['pageNo'] : 1;
     ob_start();
-        do_action( 'display_library', $pageNo ); 
+        do_action( 'display_library', $pageNo, $postsPerPage ); 
     return ob_get_clean();
 }
 

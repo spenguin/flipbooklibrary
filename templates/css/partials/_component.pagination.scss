@@ -1,0 +1,14 @@
+/** Pagination style */
+nav.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .pagination-page a {
+        padding: 0 10px;
+        font-size: 1.9rem;
+        color: $SPPBlue;
+    }
+    .current-page a {
+        color: $SPPDarkBlue;
+    }
+}
